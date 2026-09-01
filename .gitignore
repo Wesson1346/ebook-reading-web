@@ -43,3 +43,6 @@ venv/
 # Uploads / cache
 uploads/
 .cache/
+
+# E2E 临时 Chrome 配置
+e2e/.chrome-profile/

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电子书阅读器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  <header class="topbar">
+    <div class="brand">
+      <button id="tocToggle" class="icon-btn" title="目录" aria-label="目录">☰</button>
+      <h1 id="topbar">电子书阅读器</h1>
+    </div>
+    <div class="actions">
+      <button id="openBtn" class="btn" title="打开本地 TXT 文件">打开 TXT</button>
+      <button id="fontMinus" class="btn" title="减小字号">A−</button>
+      <button id="fontPlus" class="btn" title="增大字号">A+</button>
+      <button id="themeToggle" class="btn" title="切换日间/夜间主题" aria-label="切换主题">🌙</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="toc">
+      <nav class="toc-inner">
+        <h2 class="toc-title">目录</h2>
+        <ul id="tocList" class="toc-list"></ul>
+      </nav>
+    </aside>
+
+    <main class="reader-wrap">
+      <div id="reader" class="reader">
+        <div id="emptyState" class="empty">
+          <p class="empty-icon">📖</p>
+          <p class="empty-text">打开一本 TXT 电子书开始阅读</p>
+          <button id="emptyOpenBtn" class="btn btn-primary">选择 TXT 文件</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="pagenav">
+    <button id="prevBtn" class="btn nav-btn" disabled>‹ 上一页</button>
+    <span id="pageInfo" class="page-info">— / —</span>
+    <button id="nextBtn" class="btn nav-btn">下一页 ›</button>
+  </footer>
+
+  <input type="file" id="fileInput" accept=".txt,text/plain" hidden>
+  <script src="book.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
